@@ -77,7 +77,31 @@ import UIKit
      */
 
     @objc public var edgeSpacing: BLTNSpacing = .regular
-
+    
+    /**
+     * The vertical content inset of the card. Defaults to 24.
+     *
+     * Set this value before presenting the bulletin. Changing it after will have no effect.
+     */
+    
+    @objc public var verticalContentSpacing: BLTNSpacing = .custom(24)
+    
+    /**
+     * The horizontal content inset of the card. Defaults to 24.
+     *
+     * Set this value before presenting the bulletin. Changing it after will have no effect.
+     */
+    
+    @objc public var horizontalContentSpacing: BLTNSpacing = .custom(24)
+    
+    /**
+     * The spacing between sections of the content stackview. Defaults to 24.
+     *
+     * Set this value before presenting the bulletin. Changing it after will have no effect.
+     */
+    
+    @objc public var stackViewSpacing: BLTNSpacing = .custom(24)
+    
     /**
      * The rounded corner radius of the bulletin card. Defaults to 12, and 36 on iPhone X.
      *

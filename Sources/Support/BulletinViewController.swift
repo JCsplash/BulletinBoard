@@ -282,20 +282,22 @@ extension BulletinViewController {
             break
         }
 
+        let verticalContentSpacing = manager?.verticalContentSpacing.rawValue ?? 24
+        let horizontalContentSpacing = manager?.horizontalContentSpacing.rawValue ?? 24
+        let stackViewSpacing = manager?.stackViewSpacing.rawValue ?? 24
         switch (traitCollection.verticalSizeClass, traitCollection.horizontalSizeClass) {
         case (.regular, .regular):
-            stackLeadingConstraint.constant = 32
-            stackTrailingConstraint.constant = -32
-            stackBottomConstraint.constant = -32
-            contentTopConstraint.constant = -32
-            contentStackView.spacing = 32
-
+            stackLeadingConstraint.constant = horizontalContentSpacing * (4/3)
+            stackTrailingConstraint.constant = -horizontalContentSpacing * (4/3)
+            stackBottomConstraint.constant = -verticalContentSpacing * (4/3)
+            contentTopConstraint.constant = -verticalContentSpacing * (4/3)
+            contentStackView.spacing = stackViewSpacing * (4/3)
         default:
-            stackLeadingConstraint.constant = 24
-            stackTrailingConstraint.constant = -24
-            stackBottomConstraint.constant = -24
-            contentTopConstraint.constant = -24
-            contentStackView.spacing = 24
+            stackLeadingConstraint.constant = horizontalContentSpacing
+            stackTrailingConstraint.constant = -horizontalContentSpacing
+            stackBottomConstraint.constant = -verticalContentSpacing
+            contentTopConstraint.constant = -verticalContentSpacing
+            contentStackView.spacing = stackViewSpacing
 
         }
 
