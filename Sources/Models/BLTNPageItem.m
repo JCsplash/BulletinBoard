@@ -10,7 +10,7 @@
 
 @property (nonatomic, nonnull, readwrite) NSString *title;
 @property (nonatomic, nullable, readwrite) BLTNTitleLabelContainer *titleLabel;
-@property (nonatomic, nullable, readwrite) UILabel *descriptionLabel;
+@property (nonatomic, nullable, readwrite) BLTNDescriptionLabelContainer *descriptionLabel;
 @property (nonatomic, nullable, readwrite) UIImageView *imageView;
 
 @end
@@ -41,7 +41,7 @@
         return;
     }
     if (self.descriptionLabel) {
-        self.descriptionLabel.text = descriptionText;
+        self.descriptionLabel.label.text = descriptionText;
     }
 }
 
@@ -66,7 +66,7 @@
     _attributedDescriptionText = [attributedDescriptionText copy];
     self.descriptionText = nil;
     if (self.descriptionLabel) {
-        self.descriptionLabel.attributedText = attributedDescriptionText;
+        self.descriptionLabel.label.attributedText = attributedDescriptionText;
     }
 }
 
@@ -122,13 +122,13 @@
 
     if (self.attributedDescriptionText) {
         self.descriptionLabel = [interfaceBuilder makeDescriptionLabel];
-        self.descriptionLabel.attributedText = self.attributedDescriptionText;
+        self.descriptionLabel.label.attributedText = self.attributedDescriptionText;
         [contentViews addObject:self.descriptionLabel];
         insertComplementaryViews(@selector(makeViewsUnderDescriptionWithInterfaceBuilder:));
 
     } else if (self.descriptionText) {
         self.descriptionLabel = [interfaceBuilder makeDescriptionLabel];
-        self.descriptionLabel.text = self.descriptionText;
+        self.descriptionLabel.label.text = self.descriptionText;
         [contentViews addObject:self.descriptionLabel];
         insertComplementaryViews(@selector(makeViewsUnderDescriptionWithInterfaceBuilder:));
     }

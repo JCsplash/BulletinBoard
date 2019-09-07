@@ -41,26 +41,28 @@ import UIKit
         titleLabel.font = appearance.makeTitleFont()
 
         let needsCloseButton = item?.isDismissable == true && item?.requiresCloseButton == true
-        let inset: CGFloat = needsCloseButton ? 12 + 30 : 0
-
+        var inset: CGFloat = needsCloseButton ? 12 + 30 : 0
+        if !needsCloseButton && appearance.titleHorizontalInset > 0 {
+            inset = appearance.titleHorizontalInset
+        }
+        
         return BLTNTitleLabelContainer(label: titleLabel, horizontalInset: inset)
-
     }
 
     /**
      * Creates a standard description label.
      */
 
-    @objc open func makeDescriptionLabel() -> UILabel {
+    @objc open func makeDescriptionLabel() -> BLTNDescriptionLabelContainer {
 
         let descriptionLabel = UILabel()
         descriptionLabel.textAlignment = .center
         descriptionLabel.textColor = appearance.descriptionTextColor
         descriptionLabel.numberOfLines = 0
         descriptionLabel.font = appearance.makeDescriptionFont()
-
-        return descriptionLabel
-
+        let inset = appearance.descriptionHorizontalInset
+        
+        return BLTNDescriptionLabelContainer(label: descriptionLabel, horizontalInset: inset)
     }
 
     /**

@@ -90,7 +90,12 @@ import UIKit
 
     /// The font size of alternative buttons (default 15).
     @objc public var alternativeButtonFontSize: CGFloat = 15
-
+    
+    /// The horizontal inset of the title (default 0).
+    @objc public var titleHorizontalInset: CGFloat = 0
+    
+    /// The horizontal inset of the description (default 0).
+    @objc public var descriptionHorizontalInset: CGFloat = 0
 }
 
 // MARK: - Font Factories

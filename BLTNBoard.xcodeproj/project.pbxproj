@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A7DFF9A23234A9D0017A806 /* BLTNDescriptionLabelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7DFF9923234A9D0017A806 /* BLTNDescriptionLabelContainer.swift */; };
 		550675691F90A0A500874D8B /* BLTNBackgroundViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550675681F90A0A500874D8B /* BLTNBackgroundViewStyle.swift */; };
 		551D2D9C1FC060EA0078DB21 /* BLTNItemAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551D2D9B1FC060E90078DB21 /* BLTNItemAppearance.swift */; };
 		5543848B1F91FAC500AFFBCD /* BulletinPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543848A1F91FAC500AFFBCD /* BulletinPresentationAnimationController.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A7DFF9923234A9D0017A806 /* BLTNDescriptionLabelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLTNDescriptionLabelContainer.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* BLTNBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLTNBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		550675681F90A0A500874D8B /* BLTNBackgroundViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLTNBackgroundViewStyle.swift; sourceTree = "<group>"; };
 		551D2D9B1FC060E90078DB21 /* BLTNItemAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLTNItemAppearance.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				5590C04E20B85BCE0045C315 /* BLTNTitleLabelContainer.swift */,
+				3A7DFF9923234A9D0017A806 /* BLTNDescriptionLabelContainer.swift */,
 				55E8621820B844F800584EAC /* BLTNContainerView.swift */,
 				55BDB0CD20BAF845005A6C2B /* BLTNHighlightButtonWrapper.swift */,
 			);
@@ -522,6 +525,7 @@
 				55BF9C021F962FD700347D45 /* UIView+SafeAnchors.swift in Sources */,
 				55E8621B20B8476000584EAC /* BLTNViewPosition.swift in Sources */,
 				550675691F90A0A500874D8B /* BLTNBackgroundViewStyle.swift in Sources */,
+				3A7DFF9A23234A9D0017A806 /* BLTNDescriptionLabelContainer.swift in Sources */,
 				55C8EF3F204D8A010050E1C2 /* BLTNPageItem.m in Sources */,
 				5569CB7F1F920B72000F31EB /* BulletinSwipeInteractionController.swift in Sources */,
 				5590C05320B93B350045C315 /* UIColor+Luminance.swift in Sources */,

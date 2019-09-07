@@ -8,6 +8,8 @@
 #import "BLTNActionItem.h"
 
 @class BLTNTitleLabelContainer;
+@class BLTNDescriptionLabelContainer;
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -74,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - View Management
 
 @property (nonatomic, nonnull, readonly) BLTNTitleLabelContainer *titleLabel;
-@property (nonatomic, nullable, readonly) UILabel *descriptionLabel;
+@property (nonatomic, nonnull, readonly) BLTNDescriptionLabelContainer *descriptionLabel;
 @property (nonatomic, nullable, readonly) UIImageView *imageView;
 
 #pragma mark - Customization

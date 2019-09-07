@@ -64,8 +64,8 @@ extension TextFieldBulletinPage: UITextFieldDelegate {
         if isInputValid(text: textField.text) {
             textInputHandler?(self, textField.text)
         } else {
-            descriptionLabel!.textColor = .red
-            descriptionLabel!.text = "You must enter some text to continue."
+            descriptionLabel.label.textColor = .red
+            descriptionLabel.label.text = "You must enter some text to continue."
             textField.backgroundColor = UIColor.red.withAlphaComponent(0.3)
         }
 
