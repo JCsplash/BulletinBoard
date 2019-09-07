@@ -27,6 +27,9 @@ import UIKit
 
     /// The border width to apply to action button.
     @objc public var actionButtonBorderWidth: CGFloat = 1.0
+    
+    /// The horizontal inset of the action button.
+    @objc public var actionButtonHorizontalInset: CGFloat = 0
 
     /// The title color to apply to the alternative button (default blue).
     @objc public var alternativeButtonTitleColor: UIColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)

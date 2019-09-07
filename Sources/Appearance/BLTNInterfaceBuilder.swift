@@ -122,7 +122,8 @@ import UIKit
           actionButton.layer.borderWidth = appearance.actionButtonBorderWidth
         }
 
-        let wrapper = BLTNHighlightButtonWrapper(button: actionButton)
+        let inset = appearance.actionButtonHorizontalInset
+        let wrapper = BLTNHighlightButtonWrapper(button: actionButton, horizontalInset: inset)
         wrapper.setContentHuggingPriority(.defaultLow, for: .horizontal)
 
         let heightConstraint = wrapper.heightAnchor.constraint(equalToConstant: 55)
