@@ -25,7 +25,6 @@
         self.manager = nil;
         self.dismissable = YES;
         self.requiresCloseButton = YES;
-        self.needsLayout = NO;
         self.shouldStartWithActivityIndicator = NO;
         self.shouldRespondToKeyboardChanges = YES;
         self.nextItem = nil;

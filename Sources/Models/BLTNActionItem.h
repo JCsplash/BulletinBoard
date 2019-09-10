@@ -89,18 +89,6 @@
 @property (nonatomic) BOOL requiresCloseButton;
     
 /**
- * Whether the page needs to relayout constraints.
- *
- * The default value is `false`. Constraints are set when BLTN manager is created.
- *
- * You should set it to `true` if you need to relayout stackview spacing / contentview
- constraints. Contraints will be reset based on the updated horizontalContentSpacing
- and stackViewSpacing set in BLTN Manager
- */
-
-@property (nonatomic) BOOL needsLayout;
-    
-/**
  * Whether the page should start with an activity indicator.
  *
  * Set this value to `false` to display the elements right away. If you set it to `true`,

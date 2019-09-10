@@ -305,6 +305,22 @@ extension BLTNItemManager {
         refreshCurrentItemInterface(elementsChanged: false)
 
     }
+    
+    @objc public func resetLayout() {
+        
+        assertIsPrepared()
+        assertIsMainThread()
+        
+        let _verticalContentSpacing = verticalContentSpacing.rawValue
+        let _horizontalContentSpacing = horizontalContentSpacing.rawValue
+        let _stackViewSpacing = stackViewSpacing.rawValue
+        bulletinController.stackLeadingConstraint.constant = _horizontalContentSpacing
+        bulletinController.stackTrailingConstraint.constant = -_horizontalContentSpacing
+        bulletinController.stackBottomConstraint.constant = -_verticalContentSpacing
+        bulletinController.contentTopConstraint.constant = -_verticalContentSpacing
+        bulletinController.contentStackView.spacing = _stackViewSpacing
+        
+    }
 
     /**
      * Displays a new item after the current one.
@@ -320,17 +336,6 @@ extension BLTNItemManager {
         itemsStack.append(item)
 
         currentItem = item
-
-        if item.needsLayout {
-            let _verticalContentSpacing = verticalContentSpacing.rawValue
-            let _horizontalContentSpacing = horizontalContentSpacing.rawValue
-            let _stackViewSpacing = stackViewSpacing.rawValue
-            bulletinController.stackLeadingConstraint.constant = _horizontalContentSpacing
-            bulletinController.stackTrailingConstraint.constant = -_horizontalContentSpacing
-            bulletinController.stackBottomConstraint.constant = -_verticalContentSpacing
-            bulletinController.contentTopConstraint.constant = -_verticalContentSpacing
-            bulletinController.contentStackView.spacing = _stackViewSpacing
-        }
 
         shouldDisplayActivityIndicator = item.shouldStartWithActivityIndicator
         refreshCurrentItemInterface()
