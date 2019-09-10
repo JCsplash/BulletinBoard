@@ -61,14 +61,14 @@ final class BulletinViewController: UIViewController, UIGestureRecognizerDelegat
     fileprivate var centerYConstraint: NSLayoutConstraint!
 
     // Stack view constraints
-    fileprivate var stackLeadingConstraint: NSLayoutConstraint!
-    fileprivate var stackTrailingConstraint: NSLayoutConstraint!
-    fileprivate var stackBottomConstraint: NSLayoutConstraint!
+    var stackLeadingConstraint: NSLayoutConstraint!
+    var stackTrailingConstraint: NSLayoutConstraint!
+    var stackBottomConstraint: NSLayoutConstraint!
 
     // Position constraints
-    fileprivate var minYConstraint: NSLayoutConstraint!
-    fileprivate var contentTopConstraint: NSLayoutConstraint!
-    fileprivate var contentBottomConstraint: NSLayoutConstraint!
+    var minYConstraint: NSLayoutConstraint!
+    var contentTopConstraint: NSLayoutConstraint!
+    var contentBottomConstraint: NSLayoutConstraint!
 
     // MARK: - Deinit
 

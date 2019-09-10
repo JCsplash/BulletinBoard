@@ -321,9 +321,19 @@ extension BLTNItemManager {
 
         currentItem = item
 
+        if item.needsLayout {
+            let _verticalContentSpacing = verticalContentSpacing.rawValue
+            let _horizontalContentSpacing = horizontalContentSpacing.rawValue
+            let _stackViewSpacing = stackViewSpacing.rawValue
+            bulletinController.stackLeadingConstraint.constant = _horizontalContentSpacing
+            bulletinController.stackTrailingConstraint.constant = -_horizontalContentSpacing
+            bulletinController.stackBottomConstraint.constant = -_verticalContentSpacing
+            bulletinController.contentTopConstraint.constant = -_verticalContentSpacing
+            bulletinController.contentStackView.spacing = _stackViewSpacing
+        }
+
         shouldDisplayActivityIndicator = item.shouldStartWithActivityIndicator
         refreshCurrentItemInterface()
-
     }
 
     /**
