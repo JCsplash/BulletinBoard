@@ -21,6 +21,9 @@ import UIKit
 
 @objc public final class BLTNItemManager: NSObject {
 
+    /// Executes custom function when BLTNItemManager is dismissed
+    public var dismissHandler: (() -> Void)?
+
     /// Bulletin view controller.
     fileprivate var bulletinController: BulletinViewController!
 
@@ -507,7 +510,10 @@ extension BLTNItemManager {
      */
 
     @nonobjc func completeDismissal() {
-
+        
+        // Calling BLTNManager's Main Dismiss Block (Set by User)
+        dismissHandler?()
+        
         currentItem.onDismiss()
 
         for arrangedSubview in bulletinController.contentStackView.arrangedSubviews {
