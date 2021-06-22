@@ -287,7 +287,11 @@ extension BLTNItemManager {
         shouldDisplayActivityIndicator = true
         lastActivityIndicatorColor = color
 
-        bulletinController.displayActivityIndicator(color: color)
+        if #available(iOS 13, *) {
+            bulletinController.displayActivityIndicator(color: .label)
+        }else{
+            bulletinController.displayActivityIndicator(color: color)
+        }
 
     }
 
@@ -442,7 +446,11 @@ extension BLTNItemManager {
         let refreshActivityIndicator = shouldDisplayActivityIndicator && isDetached
 
         if refreshActivityIndicator {
-            bulletinController.displayActivityIndicator(color: lastActivityIndicatorColor)
+            if #available(iOS 13, *) {
+                bulletinController.displayActivityIndicator(color: .label)
+            }else{
+                bulletinController.displayActivityIndicator(color: lastActivityIndicatorColor)
+            }
         }
 
         bulletinController.modalPresentationCapturesStatusBarAppearance = true
